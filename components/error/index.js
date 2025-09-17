@@ -11,9 +11,6 @@ const Error = ({ status, children }) => {
     <div className={styles.wrapper_content}>
       <div id="Canvas"></div>
       <Page title={status || 'Error'}>
-        <Head>
-          <title>{status} — Devollox</title>
-        </Head>
         {status === 404 ? (
           <div className={styles.wrapper_error_page}>
             <h1>This page cannot be found.</h1>
