@@ -1,5 +1,5 @@
-import CountUp from '@components/countup'
 import Page from '@components/page'
+import CountUp from '@lib/countup'
 import { Eye } from 'lucide-react'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
