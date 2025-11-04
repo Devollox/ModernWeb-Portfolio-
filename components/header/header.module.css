@@ -10,13 +10,6 @@
   border-radius: var(--radius);
 }
 
-.command_homepage:hover,
-.logo:hover,
-.logo:focus-within {
-  outline: none;
-  background: #222;
-}
-
 .command_homepage {
   cursor: pointer;
   background: none;
@@ -31,8 +24,7 @@
 }
 
 .command:hover,
-.logo:hover,
-.logo:focus-within {
+.logo:hover {
   outline: none;
   background: var(--light-gray);
 }

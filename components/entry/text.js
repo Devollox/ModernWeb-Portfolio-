@@ -1,5 +1,5 @@
-import CountUp from '@components/countup'
 import Link from '@components/link'
+import CountUp from '@lib/countup'
 import cn from 'classnames'
 import { Eye } from 'lucide-react'
 import { memo, useEffect, useState } from 'react'

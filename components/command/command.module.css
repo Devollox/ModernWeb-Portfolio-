@@ -96,6 +96,7 @@
 }
 
 .command [data-command-item] > div {
+  width: 100%;
   display: flex;
   align-items: center;
 }

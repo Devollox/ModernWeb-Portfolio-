@@ -5,6 +5,7 @@ import styles from '@components/home/page.module.css'
 import getPosts from '@lib/get-posts'
 import generateRssFeed from '@lib/rss'
 import Page from 'components/home'
+import { useEffect } from 'react'
 import RenderBackdropAnimation from '../lib/renderbackdrop'
 
 export const getStaticProps = async () => {
@@ -15,8 +16,27 @@ export const getStaticProps = async () => {
 }
 
 const Home = () => {
+  useEffect(() => {
+    const element = document.getElementById('effectScroll')
+    if (element) {
+      element.scrollIntoView({ behavior: 'auto' })
+    }
+  }, [])
+
+  useEffect(() => {
+    const style = document.createElement('style')
+    style.innerHTML = `body { overflow: hidden; }`
+    document.head.appendChild(style)
+
+    setTimeout(() => {
+      if (style.parentNode) {
+        style.parentNode.removeChild(style)
+      }
+    }, 2500)
+  }, [])
+
   return (
-    <span className={styles.wrapper_home}>
+    <span id="effectScroll" className={styles.wrapper_home}>
       <Page description="Hello, my name is Devollox, and I am a programmer who values creativity and optimization.">
         <RenderBackdropAnimation />
         <div className={styles.wrapper_main}>

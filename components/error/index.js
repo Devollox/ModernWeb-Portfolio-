@@ -1,7 +1,6 @@
 import Page from '@components/page'
 import { GameOfLife } from '@lib/gameoflife'
 import Encoding from 'components/encoding'
-import Head from 'next/head'
 import styles from './error.module.css'
 
 const Error = ({ status, children }) => {
@@ -13,7 +12,7 @@ const Error = ({ status, children }) => {
       <Page title={status || 'Error'}>
         {status === 404 ? (
           <div className={styles.wrapper_error_page}>
-            <h1>This page cannot be found.</h1>
+            <h>This page cannot be found.</h>
 
             <blockquote cite="http://www.aaronsw.com/weblog/visitingmit">
               <p>

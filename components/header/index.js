@@ -21,7 +21,19 @@ const Header = ({ title, content, variant }) => {
           variant === 'true' ? styles.header_homepage : styles.header_page
         )}
       >
-        <Link legacyBehavior href="/">
+        <Link
+          legacyBehavior
+          href="/"
+          onClick={e => {
+            e.preventDefault()
+            const element = document.querySelector(
+              '.header_nav_homepage__0PsQe'
+            )
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' })
+            }
+          }}
+        >
           <a aria-label="Navigate Home" className={styles.logo}>
             <Code size={32} color="var(--fg)" />
           </a>

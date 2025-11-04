@@ -16,14 +16,7 @@ import {
 } from 'cmdk'
 
 import headerStyles from '@components/header/header.module.css'
-import {
-  ArrowRight,
-  Book,
-  Pencil,
-  Play,
-  Search,
-  Sparkles
-} from '@components/icons'
+import { ArrowRight, Pencil, Play, Search, Sparkles } from '@components/icons'
 import postMeta from '@data/blog.json'
 import tinykeys from '@lib/tinykeys'
 import clsx from 'clsx'
@@ -187,7 +180,7 @@ const ThemeItems = () => {
     if (theme === activeTheme) return null
     return (
       <Item
-        value={theme}
+        value={'theme'}
         key={`theme-${theme}`}
         callback={() => {
           setTheme(theme)
@@ -208,7 +201,7 @@ const BlogItems = () => {
       <Item
         key={`blog-item-${post.title}-${i}`}
         value={post.title}
-        callback={() => router.push('/blog/[slug]', `/blog/${post.slug}`)}
+        callback={() => router.push('/blog/[slug]', `/blog/${post.slug}, `)}
       />
     )
   })
@@ -247,7 +240,6 @@ const DefaultItems = () => {
       </Group>
 
       <Group title="Collection">
-        <Item value="Reading" icon={<Book />} keybind="g r" />
         <Item value="Uses" icon={<Play />} keybind="g c" />
       </Group>
 
@@ -263,11 +255,63 @@ const DefaultItems = () => {
 
       <Group title="Social">
         <Item
+          children={
+            <a
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                width: '100%'
+              }}
+            >
+              Github{' '}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-up-right"
+              >
+                <path d="M7 7h10v10"></path>
+                <path d="M7 17 17 7"></path>
+              </svg>
+            </a>
+          }
           value="GitHub"
           icon={<Github />}
           callback={() => window.open('https://github.com/devollox', '_blank')}
         />
         <Item
+          children={
+            <a
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                width: '100%'
+              }}
+            >
+              Steam{' '}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-up-right"
+              >
+                <path d="M7 7h10v10"></path>
+                <path d="M7 17 17 7"></path>
+              </svg>
+            </a>
+          }
           value="Steam"
           icon={<Gamepad2 />}
           callback={() =>
