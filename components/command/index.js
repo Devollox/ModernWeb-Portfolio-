@@ -201,7 +201,7 @@ const BlogItems = () => {
       <Item
         key={`blog-item-${post.title}-${i}`}
         value={post.title}
-        callback={() => router.push('/blog/[slug]', `/blog/${post.slug}, `)}
+        callback={() => router.push('/blog/[slug]', `/blog/${post.slug}`)}
       />
     )
   })
