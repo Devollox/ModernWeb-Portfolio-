@@ -14,13 +14,10 @@ export function GameOfLife() {
     canvas.style.left = '0'
     canvas.style.border = 'none'
     canvas.style.zIndex = '0'
-
-    let html = document.getElementsByTagName('html')[0]
-    if (html.attributes[1].value === 'light') {
-      html.attributes[1].value = '#F5F5F5'
-    }
-    canvas.style.backgroundColor = html.attributes[1].value
-
+    canvas.style.backgroundColor = `${
+      document.getElementsByTagName('html')[0].attributes[1].value
+    }`
+    
     const ctx = canvas.getContext('2d')
 
     const cellSize = 10
@@ -107,3 +104,4 @@ export function GameOfLife() {
 
   return null
 }
+
