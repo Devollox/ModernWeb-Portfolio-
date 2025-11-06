@@ -34,6 +34,7 @@
   --lightest-gray: #1a1a1a;
   --article-color: #eaeaea;
   --gray-bg: #1a1a1a;
+  --gray-bg-b: #1a1a1a;
   --kbd-bg: #ffff;
   --header-bg: rgba(19, 20, 21, 0.45);
   --gray-alpha: rgba(255, 255, 255, 0.5);
@@ -55,6 +56,7 @@
   --lightest-gray: #fafafa;
   --article-color: #212121;
   --gray-bg: #00000;
+  --gray-bg-b: #d9d9d96d;
   --kbd-bg: #fffff;
   --header-bg: rgba(255, 255, 255, 0.8);
   --gray-alpha: rgba(19, 20, 21, 0.5);
@@ -220,7 +222,7 @@ kbd {
 }
 
 button:hover {
-  background-color: var(--gray-bg);
+  background-color: var(--gray-bg-b);
 
   > kbd {
     background-color: var(--kbd-bg);
