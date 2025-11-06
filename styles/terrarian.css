@@ -76,12 +76,12 @@ canvas {
 
 .landscape .landscapeItem.mountains.midground {
   z-index: 2;
-  background-image: url(https://raw.githubusercontent.com/ErrorProgramming/.github/master/Mount_5.svg);
+  background-image: url(../public/mount/Mount_5.svg);
 }
 
 .landscape .landscapeItem.mountains.foreground {
   z-index: 3;
-  background-image: url(https://raw.githubusercontent.com/ErrorProgramming/.github/master/Mount_4.svg);
+  background-image: url(../public/mount/Mount_4.svg);
 }
 
 .landscape .landscapeItem.mountains:nth-last-child(1) {
@@ -166,17 +166,17 @@ canvas {
 
 .landscape .landscapeItem.trees.background {
   z-index: 4;
-  background-image: url(https://raw.githubusercontent.com/ErrorProgramming/.github/master/Mount_3.svg);
+  background-image: url(../public/mount/Mount_3.svg);
 }
 
 .landscape .landscapeItem.trees.midground {
   z-index: 5;
-  background-image: url(https://raw.githubusercontent.com/ErrorProgramming/.github/master/Mount_2.svg);
+  background-image: url(../public/mount/Mount_2.svg);
 }
 
 .landscape .landscapeItem.trees.foreground {
   z-index: 6;
-  background-image: url(https://raw.githubusercontent.com/ErrorProgramming/.github/master/Mount_1.svg);
+  background-image: url(../public/mount/Mount_1.svg);
 }
 
 .landscape .landscapeItem.trees:nth-last-child(1) {
