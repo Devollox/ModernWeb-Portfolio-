@@ -15,9 +15,11 @@ export function GameOfLife() {
     canvas.style.border = 'none'
     canvas.style.zIndex = '0'
 
-    canvas.style.backgroundColor = `${
-      document.getElementsByTagName('html')[0].attributes[1].value
-    }`
+    let html = document.getElementsByTagName('html')[0]
+    if (html.attributes[1].value === 'light') {
+      html.attributes[1].value = '#F5F5F5'
+    }
+    canvas.style.backgroundColor = html.attributes[1].value
 
     const ctx = canvas.getContext('2d')
 

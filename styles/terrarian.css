@@ -71,7 +71,7 @@ canvas {
 .landscape .landscapeItem.mountains.background.animateIn {
   opacity: 0.6;
   background-blend-mode: lighten;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .landscape .landscapeItem.mountains.midground {
