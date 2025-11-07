@@ -17,7 +17,7 @@ export function GameOfLife() {
     canvas.style.backgroundColor = `${
       document.getElementsByTagName('html')[0].attributes[1].value
     }`
-    
+
     const ctx = canvas.getContext('2d')
 
     const cellSize = 10
@@ -104,4 +104,3 @@ export function GameOfLife() {
 
   return null
 }
-
