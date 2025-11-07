@@ -179,6 +179,7 @@ const ThemeItems = () => {
   return themes.map(theme => {
     if (theme === 'system') return null
     if (theme === activeTheme) return null
+
     return (
       <Item
         value={'theme'}

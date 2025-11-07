@@ -8,11 +8,12 @@ const Page = ({
   title,
   description,
   image,
+  style,
   showHeaderTitle = true,
   children
 }) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} style={style}>
       <Head
         title={`${title ? `${title} - ` : ''}Devollox`}
         description={description}

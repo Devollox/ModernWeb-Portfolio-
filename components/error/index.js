@@ -9,7 +9,7 @@ const Error = ({ status, children }) => {
   return (
     <div className={styles.wrapper_content}>
       <div id="Canvas"></div>
-      <Page title={status || 'Error'}>
+      <Page title={status || 'Error'} style={{ marginBottom: '0px' }}>
         {status === 404 ? (
           <div className={styles.wrapper_error_page}>
             <h>This page cannot be found.</h>
